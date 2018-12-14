@@ -1,0 +1,16 @@
+{
+	"name": "megagroup/megacrm-api-client",
+	"description": "Client library for MegaCRM API",
+	"license": "MIT",
+	"require": {
+		"php": ">=5.6",
+		"ext-ctype": "*",
+		"ext-json": "*",
+		"guzzlehttp/guzzle": "^6.3"
+	},
+	"autoload": {
+		"psr-4": {
+			"Megagroup\\MegaCrm\\Api\\": "src/"
+		}
+	}
+}
