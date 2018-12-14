@@ -19,7 +19,6 @@ $transport = new Api\Client($megacrm_account_id, $megacrm_api_key);
 $deal = new Api\Request\Type\Deal;
 
 $deal->setTitle('Your deal title');
-$deal->setPriceType(Api\Request\Type\Deal\PriceType::PRICE);
 $deal->setPrice(1000);
 $deal->setTags(['VIP']);
 

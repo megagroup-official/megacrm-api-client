@@ -14,7 +14,6 @@ use Megagroup\MegaCrm\Api\Type\StructAbstract;
 /**
  * @method int getId()
  * @method string getTitle()
- * @method int getPriceType()
  * @method int getCategoryId()
  * @method int getClientId()
  * @method int getCurrencyId()
@@ -31,7 +30,6 @@ use Megagroup\MegaCrm\Api\Type\StructAbstract;
  *
  * @method Deal setId(int $id)
  * @method Deal setTitle(string $title)
- * @method Deal setPriceType(int $price_type)
  * @method Deal setCategoryId(int $category_id)
  * @method Deal setClientId(int $client_id)
  * @method Deal setCurrencyId(int $currency_id)
@@ -58,11 +56,6 @@ class Deal extends StructAbstract
      * @var string
      */
     protected $title;
-
-    /**
-     * @var int
-     */
-    protected $price_type;
 
     /**
      * @var int
@@ -134,7 +127,6 @@ class Deal extends StructAbstract
         return [
             'id' => new Integer,
             'title' => new Generic,
-            'price_type' => new Integer,
             'category_id' => new Integer,
             'client_id' => new Integer,
             'currency_id' => new Integer,

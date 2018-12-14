@@ -25,7 +25,6 @@ use Megagroup\MegaCrm\Api\Type\StructAbstract;
  * @method int getCreatorId()
  * @method int getClientId()
  * @method int getDoerId()
- * @method int getPriceType()
  * @method float getPrice()
  * @method float getPriceTotal()
  * @method float getPriceVat()
@@ -49,7 +48,6 @@ use Megagroup\MegaCrm\Api\Type\StructAbstract;
  * @method Deal setCreatorId(int $creator_id)
  * @method Deal setClientId(int $client_id)
  * @method Deal setDoerId(int $doer_id)
- * @method Deal setPriceType(int $price_type)
  * @method Deal setPrice(float $price)
  * @method Deal setPriceTotal(float $price_total)
  * @method Deal setPriceVat(float $price_vat)
@@ -103,11 +101,6 @@ class Deal extends StructAbstract
      * @var int
      */
     protected $doer_id;
-
-    /**
-     * @var int
-     */
-    protected $price_type;
 
     /**
      * @var float
@@ -194,7 +187,6 @@ class Deal extends StructAbstract
             'creator_id' => new Integer,
             'client_id' => new Integer,
             'doer_id' => new Integer,
-            'price_type' => new Integer,
             'price' => new RealNumber,
             'price_total' => new RealNumber,
             'price_vat' => new RealNumber,
