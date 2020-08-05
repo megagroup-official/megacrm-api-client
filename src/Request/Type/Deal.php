@@ -22,6 +22,9 @@ use Megagroup\MegaCrm\Api\Type\StructAbstract;
  * @method int getSourceId()
  * @method int getStatusId()
  * @method string getDescription()
+ * @method int getDiscountType()
+ * @method float getDiscountFixed()
+ * @method float getDiscountPercent()
  * @method float getPrice()
  * @method int getPostpone()
  * @method bool getDeleted()
@@ -38,6 +41,9 @@ use Megagroup\MegaCrm\Api\Type\StructAbstract;
  * @method Deal setSourceId(int $source_id)
  * @method Deal setStatusId(int $status_id)
  * @method Deal setDescription(string $description)
+ * @method Deal setDiscountType(int $discount_type)
+ * @method Deal setDiscountFixed(float $discount_fixed)
+ * @method Deal setDiscountPercent(float $discount_percent)
  * @method Deal setPrice(float $price)
  * @method Deal setPostpone(int $postpone)
  * @method Deal setDeleted(bool $deleted)
@@ -98,6 +104,21 @@ class Deal extends StructAbstract
     protected $description;
 
     /**
+     * @var int
+     */
+    protected $discount_type;
+
+    /**
+     * @var float
+     */
+    protected $discount_fixed;
+
+    /**
+     * @var float
+     */
+    protected $discount_percent;
+
+    /**
      * @var float
      */
     protected $price;
@@ -135,6 +156,9 @@ class Deal extends StructAbstract
             'source_id' => new Integer,
             'status_id' => new Integer,
             'description' => new Generic,
+            'discount_type' => new Integer,
+            'discount_fixed' => new RealNumber,
+            'discount_percent' => new RealNumber,
             'price' => new RealNumber,
             'postpone' => new Integer,
             'deleted' => new Boolean,

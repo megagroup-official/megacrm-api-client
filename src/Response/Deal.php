@@ -25,7 +25,11 @@ use Megagroup\MegaCrm\Api\Type\StructAbstract;
  * @method int getCreatorId()
  * @method int getClientId()
  * @method int getDoerId()
+ * @method int getDiscountType()
+ * @method float getDiscountFixed()
+ * @method float getDiscountPercent()
  * @method float getPrice()
+ * @method float getDiscount()
  * @method float getPriceTotal()
  * @method float getPriceVat()
  * @method int getCreated()
@@ -48,7 +52,11 @@ use Megagroup\MegaCrm\Api\Type\StructAbstract;
  * @method Deal setCreatorId(int $creator_id)
  * @method Deal setClientId(int $client_id)
  * @method Deal setDoerId(int $doer_id)
+ * @method Deal setDiscountType(int $discount_type)
+ * @method Deal setDiscountFixed(float $discount_fixed)
+ * @method Deal setDiscountPercent(float $discount_percent)
  * @method Deal setPrice(float $price)
+ * @method Deal setDiscount(float $discount)
  * @method Deal setPriceTotal(float $price_total)
  * @method Deal setPriceVat(float $price_vat)
  * @method Deal setCreated(int $created)
@@ -103,9 +111,29 @@ class Deal extends StructAbstract
     protected $doer_id;
 
     /**
+     * @var int
+     */
+    protected $discount_type;
+
+    /**
+     * @var float
+     */
+    protected $discount_fixed;
+
+    /**
+     * @var float
+     */
+    protected $discount_percent;
+
+    /**
      * @var float
      */
     protected $price;
+
+    /**
+     * @var float
+     */
+    protected $discount;
 
     /**
      * @var float
@@ -187,7 +215,11 @@ class Deal extends StructAbstract
             'creator_id' => new Integer,
             'client_id' => new Integer,
             'doer_id' => new Integer,
+            'discount_type' => new Integer,
+            'discount_fixed' => new RealNumber,
+            'discount_percent' => new RealNumber,
             'price' => new RealNumber,
+            'discount' => new RealNumber,
             'price_total' => new RealNumber,
             'price_vat' => new RealNumber,
             'created' => new Integer,
